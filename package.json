@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "mvloader": "git+https://github.com/mvoevodskiy/mvloader.git"
+    "express": "^4.17.1"
   }
 }
