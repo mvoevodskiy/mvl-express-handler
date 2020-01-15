@@ -39,7 +39,7 @@ class ExpressHandler {
                     if (this.config.routes[method].hasOwnProperty(route)) {
                         let handler = this.MT.extract(this.config.routes[method][route]);
                         if (!this.MT.empty(handler)) {
-                            this.express[method](route, (request, response) => handler(this, request, response));
+                            this.express[method](route, handler);
                         }
                     }
                 }
