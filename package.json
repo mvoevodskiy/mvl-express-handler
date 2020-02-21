@@ -1,5 +1,5 @@
 {
-  "name": "express-handler",
+  "name": "mvl-express-handler",
   "version": "0.0.1",
   "description": "",
   "main": "src/expresshandler.js",
