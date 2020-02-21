@@ -26,6 +26,7 @@ class ExpressHandler {
         this.MT = this.App.MT;
         this.loadConfig(config);
         this.express = express();
+        this.express.use(express.json());
     }
 
     async loadConfig (config) {
