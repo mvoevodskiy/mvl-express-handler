@@ -38,7 +38,10 @@ class ExpressHandler {
             if (this.config.routes.hasOwnProperty(method)) {
                 for (let route in this.config.routes[method]) {
                     if (this.config.routes[method].hasOwnProperty(route)) {
-                        let handler = this.MT.extract(this.config.routes[method][route]);
+                        let handler
+                        if (typeof this.config.routes[method][route] === 'function') handler = this.config.routes[method][route]
+                        else handler = this.MT.extract(this.config.routes[method][route]);
+                        console.log('APPLY ROUTES. ROUTE:', route, 'HANDLER:', handler)
                         if (!this.MT.empty(handler)) {
                             this.express[method](route, handler);
                         }
